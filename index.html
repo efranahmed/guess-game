@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>guess game</title>
+  </head>
+  <body>
+    <script>
+      let Rnum = Math.floor(Math.random() * 100);
+      let a;
+      let na = Number.parseInt(a);
+      let score = 100;
+      console.log(Rnum);
+      while (a != Rnum) {
+        score -= 1;
+        a = prompt("chose a number lower than 100");
+        if (a == Rnum) {
+          alert(
+            ` you chose a perfect number  and you find the number in ${
+              100 - score
+            } chance `
+          );
+        } else if (a < Rnum) {
+          alert("your number is lower than random number");
+        } else if (a > Rnum && a < 100) {
+          alert("your number is higher than random number");
+        } else {
+          alert(
+            "chose a number which is lower than 100 not greater than 100  "
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
